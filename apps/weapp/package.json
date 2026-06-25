@@ -1,0 +1,40 @@
+{
+  "name": "weapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:weapp": "taro build --type weapp --watch",
+    "build": "taro build --type weapp",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.101.1",
+    "@tarojs/components": "4.2.0",
+    "@tarojs/helper": "4.2.0",
+    "@tarojs/plugin-framework-react": "4.2.0",
+    "@tarojs/plugin-platform-weapp": "4.2.0",
+    "@tarojs/react": "4.2.0",
+    "@tarojs/runtime": "4.2.0",
+    "@tarojs/shared": "4.2.0",
+    "@tarojs/taro": "4.2.0",
+    "@template/api-client": "workspace:*",
+    "@template/schemas": "workspace:*",
+    "@template/shared": "workspace:*",
+    "@template/store": "workspace:*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "valtio": "^2.3.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.28.5",
+    "@tarojs/cli": "4.2.0",
+    "@tarojs/webpack5-runner": "4.2.0",
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "babel-preset-taro": "4.2.0",
+    "webpack": "5.91.0"
+  }
+}

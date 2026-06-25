@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "baseUrl": ".",
+    "paths": {
+      "@template/shared": ["packages/shared/src/index.ts"],
+      "@template/schemas": ["packages/schemas/src/index.ts"],
+      "@template/api-client": ["packages/api-client/src/index.ts"],
+      "@template/store": ["packages/store/src/index.ts"]
+    }
+  }
+}

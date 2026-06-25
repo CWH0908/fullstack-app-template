@@ -1,0 +1,36 @@
+{
+  "name": "fullstack-app-template",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A pnpm monorepo seed for Taro mini programs, Expo apps, Vite web apps, and a NestJS API.",
+  "packageManager": "pnpm@8.15.8",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=8.0.0 <9.0.0"
+  },
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "format": "prettier --write .",
+    "clean": "turbo clean && rimraf node_modules",
+    "dev:api": "pnpm --filter api start:dev",
+    "dev:weapp": "pnpm --filter weapp dev:weapp",
+    "dev:mobile": "pnpm --filter mobile start",
+    "dev:web": "pnpm --filter web dev",
+    "dev:admin": "pnpm --filter admin dev",
+    "db:init": "pnpm --filter api db:init"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^22.19.3",
+    "eslint": "^9.39.2",
+    "prettier": "^3.7.4",
+    "rimraf": "^6.1.2",
+    "tsx": "^4.21.0",
+    "turbo": "^2.10.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.50.0"
+  }
+}

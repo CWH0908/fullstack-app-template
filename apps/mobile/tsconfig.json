@@ -1,0 +1,14 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@template/shared": ["../../packages/shared/src/index.ts"],
+      "@template/schemas": ["../../packages/schemas/src/index.ts"],
+      "@template/api-client": ["../../packages/api-client/src/index.ts"],
+      "@template/store": ["../../packages/store/src/index.ts"]
+    }
+  },
+  "include": ["app/**/*.ts", "app/**/*.tsx", "src/**/*.ts", "src/**/*.tsx"]
+}

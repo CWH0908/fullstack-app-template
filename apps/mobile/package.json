@@ -1,0 +1,38 @@
+{
+  "name": "mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "build": "echo \"Use EAS for native builds: eas build --platform android\"",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "clean": "rimraf .expo"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.101.1",
+    "@template/api-client": "workspace:*",
+    "@template/schemas": "workspace:*",
+    "@template/shared": "workspace:*",
+    "@template/store": "workspace:*",
+    "expo": "^56.0.12",
+    "expo-constants": "~56.0.18",
+    "expo-router": "^56.2.11",
+    "expo-secure-store": "~56.0.4",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-native": "^0.86.0",
+    "react-native-safe-area-context": "^5.8.0",
+    "react-native-screens": "^4.25.2",
+    "react-native-worklets": "^0.10.0",
+    "valtio": "^2.3.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "babel-preset-expo": "~56.0.15",
+    "typescript": "^5.9.3"
+  }
+}

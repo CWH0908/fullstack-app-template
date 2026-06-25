@@ -1,0 +1,30 @@
+node_modules
+.pnpm-store
+.turbo
+.env
+.env.*
+!.env.example
+dist
+build
+coverage
+*.tsbuildinfo
+*.log
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+
+# Taro / mini program outputs
+apps/weapp/dist
+apps/weapp/.temp
+apps/weapp/.swc
+
+# Expo / React Native
+apps/mobile/.expo
+apps/mobile/.expo-shared
+apps/mobile/android
+apps/mobile/ios
+
+# Nest / Prisma
+apps/api/dist
+prisma/migrations/dev-*

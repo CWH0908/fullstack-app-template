@@ -1,0 +1,86 @@
+:root {
+  color: #1c1d1f;
+  background: #eef1ee;
+  font-family:
+    "Aptos",
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  border: 1px solid #cbd3cb;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font: inherit;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  border-right: 1px solid #d9ded9;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 28px;
+}
+
+nav {
+  display: grid;
+  gap: 10px;
+}
+
+.workspace {
+  padding: 48px;
+}
+
+.workspace header p {
+  color: #5c6f61;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.workspace h1 {
+  font-size: 42px;
+  margin: 0 0 32px;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #d9ded9;
+  border-radius: 8px;
+  max-width: 720px;
+  padding: 28px;
+}
+
+.panel p {
+  color: #4c514c;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-bottom: 1px solid #d9ded9;
+    border-right: 0;
+  }
+}

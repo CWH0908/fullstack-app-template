@@ -1,0 +1,41 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 96px 40px;
+}
+
+.eyebrow {
+  color: #a34225;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.title {
+  color: #141414;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.summary {
+  color: #55514a;
+  font-size: 30px;
+  line-height: 1.7;
+  margin-top: 28px;
+}
+
+.button {
+  background: #1d4d4f;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 30px;
+  margin: 42px 0 0;
+}
+
+.status {
+  color: #333;
+  font-size: 28px;
+  margin-top: 24px;
+}

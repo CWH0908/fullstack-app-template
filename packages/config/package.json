@@ -1,0 +1,13 @@
+{
+  "name": "@template/config",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "files": ["tsconfig", "eslint"],
+  "scripts": {
+    "build": "echo \"config package has no build output\"",
+    "typecheck": "echo \"config package has no typecheck\"",
+    "lint": "echo \"config package has no lint\"",
+    "clean": "echo \"config package has no clean\""
+  }
+}

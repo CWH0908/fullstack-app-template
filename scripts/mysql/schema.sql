@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS users (
+  id VARCHAR(36) NOT NULL,
+  open_id VARCHAR(191) NULL,
+  nickname VARCHAR(40) NOT NULL,
+  avatar_url VARCHAR(2048) NULL,
+  role ENUM('user', 'admin') NOT NULL DEFAULT 'user',
+  created_at TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  updated_at TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),
+  PRIMARY KEY (id),
+  UNIQUE KEY users_open_id_unique (open_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

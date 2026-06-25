@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "types": ["@tarojs/taro"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@template/shared": ["../../packages/shared/src/index.ts"],
+      "@template/schemas": ["../../packages/schemas/src/index.ts"],
+      "@template/api-client": ["../../packages/api-client/src/index.ts"],
+      "@template/store": ["../../packages/store/src/index.ts"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "config/**/*.ts"]
+}
