@@ -2,9 +2,9 @@
 
 <div align="center">
 
-A pragmatic TypeScript fullstack monorepo template for multi-platform products.
+一个面向多端产品的实用 TypeScript 全栈 monorepo 模板。
 
-English | [简体中文](./README.zh-CN.md)
+简体中文 | [English](./README.en.md)
 
 </div>
 
@@ -22,150 +22,150 @@ English | [简体中文](./README.zh-CN.md)
 
 <div align="center">
 
-[✨ Features](#-features) · [🧱 Tech Stack](#-tech-stack) · [🚀 Quick Start](#-quick-start) · [🧭 Architecture](#-architecture-flow) · [🗺️ Roadmap](#-roadmap)
+[✨ 项目亮点](#-项目亮点) · [🧱 技术栈](#-技术栈) · [🚀 快速开始](#-快速开始) · [🧭 架构链路](#-架构链路) · [🗺️ Roadmap](#-roadmap)
 
 </div>
 
-## ✨ Features
+## ✨ 项目亮点
 
-- 🧩 **Multi-platform workspace**: WeApp, mobile, web, admin, and API in one repo.
-- 🔐 **Type-safe contracts**: shared Zod schemas for request and response models.
-- 🔌 **Shared API client**: all apps call backend APIs through the same SDK.
-- 🗄️ **MySQL-first backend**: Kysely + mysql2 for clear, typed SQL access.
-- 🧰 **No Docker required locally**: designed for frontend-friendly local setup.
-- ⚡ **Monorepo pipeline**: pnpm workspace and Turborepo tasks.
-- 🧠 **AI-friendly structure**: clear full-stack update path for schema, API, client, and UI.
+- 🧩 **多端 workspace**：WeApp、Mobile、Web、Admin、API 放在同一个仓库。
+- 🔐 **类型安全契约**：使用共享 Zod schemas 维护接口入参和响应模型。
+- 🔌 **共享 API client**：所有客户端通过同一套 SDK 请求后端。
+- 🗄️ **MySQL 优先后端**：Kysely + mysql2，保留清晰、类型化的 SQL 访问方式。
+- 🧰 **本地不强依赖 Docker**：更适合前端同学快速启动和验证。
+- ⚡ **Monorepo 工程化**：pnpm workspace + Turborepo pipeline。
+- 🧠 **AI 友好结构**：schema、API、client、UI 的全链路更新路径清晰。
 
-## 🧱 Tech Stack
+## 🧱 技术栈
 
-| Layer | Technology |
+| 层级 | 技术 |
 | --- | --- |
 | 🟢 Runtime | Node.js 22 |
-| 📦 Package manager | pnpm 8 |
+| 📦 包管理 | pnpm 8 |
 | ⚙️ Monorepo | Turborepo |
-| 🧑‍💻 Language | TypeScript 5.9 |
-| 💬 Mini program | Taro + React |
-| 📱 Mobile | Expo + React Native |
+| 🧑‍💻 语言 | TypeScript 5.9 |
+| 💬 小程序 | Taro + React |
+| 📱 移动端 | Expo + React Native |
 | 🌐 Web | Vite + React |
-| 🛠️ Admin | Vite + React |
+| 🛠️ 管理后台 | Vite + React |
 | ⚡ API | NestJS |
-| 🗄️ Database access | Kysely + mysql2 |
-| 🐬 Database | MySQL |
-| 🧬 Validation | Zod |
-| 🧠 State | Valtio + TanStack Query |
+| 🗄️ 数据访问 | Kysely + mysql2 |
+| 🐬 数据库 | MySQL |
+| 🧬 校验 | Zod |
+| 🧠 状态 | Valtio + TanStack Query |
 
-## 📦 Project Structure
+## 📦 目录结构
 
 ```txt
 apps/
   api/       # ⚡ NestJS API
-  web/       # 🌐 Vite web app
-  admin/     # 🛠️ Vite admin app
-  mobile/    # 📱 Expo / React Native app
-  weapp/     # 💬 Taro WeChat mini program
+  web/       # 🌐 Vite Web 应用
+  admin/     # 🛠️ Vite 管理后台
+  mobile/    # 📱 Expo / React Native 应用
+  weapp/     # 💬 Taro 微信小程序
 
 packages/
-  api-client/  # 🔌 Shared request SDK
-  schemas/     # 🧬 Zod schemas and inferred types
-  shared/      # 🧰 Pure TypeScript utilities, constants, and types
-  store/       # 🧠 Shared Valtio state models
-  config/      # ⚙️ Shared tooling config
+  api-client/  # 🔌 共享请求 SDK
+  schemas/     # 🧬 Zod schemas 和推导类型
+  shared/      # 🧰 纯 TypeScript 工具、常量和类型
+  store/       # 🧠 共享 Valtio 状态模型
+  config/      # ⚙️ 共享工程配置
 
 scripts/
-  mysql/        # 🗄️ MySQL schema bootstrap SQL
+  mysql/        # 🗄️ MySQL 初始化 SQL
 
 docs/
-  architecture/ # 🧭 Architecture and development notes
+  architecture/ # 🧭 架构和开发说明
 ```
 
-## 🚀 Quick Start
+## 🚀 快速开始
 
-### ✅ Prerequisites
+### ✅ 环境要求
 
 - 🟢 Node.js 22+
 - 📦 pnpm 8.x
-- 🐬 MySQL 8.x or compatible MySQL service
+- 🐬 MySQL 8.x 或兼容 MySQL 的服务
 
-### 📥 Install Dependencies
+### 📥 安装依赖
 
 ```bash
 pnpm install
 ```
 
-### 🔧 Configure Environment
+### 🔧 配置环境变量
 
 ```bash
 cp .env.example .env
 ```
 
-Update the MySQL connection in `.env`:
+修改 `.env` 中的 MySQL 连接信息：
 
 ```env
 DATABASE_URL=mysql://root:password@localhost:3306/fullstack_app
 JWT_SECRET=replace-with-a-long-random-secret
 ```
 
-Replace `root` and `password` with your local MySQL credentials.
+把 `root` 和 `password` 替换成你本机 MySQL 的账号密码。
 
-### 🗄️ Initialize Database
+### 🗄️ 初始化数据库
 
-Make sure MySQL is running, then execute:
+确认 MySQL 已经启动，然后执行：
 
 ```bash
 pnpm db:init
 ```
 
-This command creates the configured database if needed and applies `scripts/mysql/schema.sql`.
+这个命令会按需创建数据库，并执行 `scripts/mysql/schema.sql` 初始化表结构。
 
-### 🧪 Start Apps
+### 🧪 启动应用
 
-Run one app at a time:
+按需启动单个应用：
 
 ```bash
 pnpm dev:api      # ⚡ NestJS API, http://localhost:3000
-pnpm dev:web      # 🌐 Vite web app, http://localhost:8081
-pnpm dev:admin    # 🛠️ Vite admin app, http://localhost:8082
+pnpm dev:web      # 🌐 Vite Web, http://localhost:8081
+pnpm dev:admin    # 🛠️ Vite Admin, http://localhost:8082
 pnpm dev:mobile   # 📱 Expo / React Native
-pnpm dev:weapp    # 💬 Taro WeChat mini program
+pnpm dev:weapp    # 💬 Taro 微信小程序
 ```
 
-Or start the full development pipeline:
+也可以启动全部开发 pipeline：
 
 ```bash
 pnpm dev
 ```
 
-## 🧾 Environment Variables
+## 🧾 环境变量
 
-| Variable | Used by | Description |
+| 变量 | 使用方 | 说明 |
 | --- | --- | --- |
-| `TARO_APP_API_BASE_URL` | 💬 WeApp | API base URL for Taro |
-| `EXPO_PUBLIC_API_BASE_URL` | 📱 Mobile | API base URL for Expo |
-| `VITE_API_BASE_URL` | 🌐 Web/Admin | API base URL for Vite apps |
-| `API_PORT` | ⚡ API | NestJS server port |
-| `DATABASE_URL` | 🗄️ API | MySQL connection string |
-| `JWT_SECRET` | 🔐 API | JWT signing secret |
-| `WECHAT_APP_ID` | 💬 API | WeChat app id |
-| `WECHAT_APP_SECRET` | 💬 API | WeChat app secret |
+| `TARO_APP_API_BASE_URL` | 💬 WeApp | Taro API 地址 |
+| `EXPO_PUBLIC_API_BASE_URL` | 📱 Mobile | Expo API 地址 |
+| `VITE_API_BASE_URL` | 🌐 Web/Admin | Vite 应用 API 地址 |
+| `API_PORT` | ⚡ API | NestJS 服务端口 |
+| `DATABASE_URL` | 🗄️ API | MySQL 连接串 |
+| `JWT_SECRET` | 🔐 API | JWT 签名密钥 |
+| `WECHAT_APP_ID` | 💬 API | 微信 app id |
+| `WECHAT_APP_SECRET` | 💬 API | 微信 app secret |
 
-## 🧰 Available Scripts
+## 🧰 常用命令
 
-| Command | Description |
+| 命令 | 说明 |
 | --- | --- |
-| `pnpm db:init` | 🗄️ Initialize the MySQL database and tables |
-| `pnpm dev` | 🚀 Start all development pipelines |
-| `pnpm dev:api` | ⚡ Start the NestJS API |
-| `pnpm dev:web` | 🌐 Start the web app |
-| `pnpm dev:admin` | 🛠️ Start the admin app |
-| `pnpm dev:mobile` | 📱 Start the Expo mobile app |
-| `pnpm dev:weapp` | 💬 Start the Taro WeChat mini program |
-| `pnpm typecheck` | 🧑‍💻 Run TypeScript checks |
-| `pnpm lint` | 🔎 Run ESLint |
-| `pnpm build` | 📦 Build all workspaces |
-| `pnpm format` | 🎨 Format files with Prettier |
-| `pnpm clean` | 🧹 Clean build artifacts and dependencies |
+| `pnpm db:init` | 🗄️ 初始化 MySQL 数据库和表 |
+| `pnpm dev` | 🚀 启动全部开发 pipeline |
+| `pnpm dev:api` | ⚡ 启动 NestJS API |
+| `pnpm dev:web` | 🌐 启动 Web 应用 |
+| `pnpm dev:admin` | 🛠️ 启动管理后台 |
+| `pnpm dev:mobile` | 📱 启动 Expo 移动端 |
+| `pnpm dev:weapp` | 💬 启动 Taro 微信小程序 |
+| `pnpm typecheck` | 🧑‍💻 执行 TypeScript 检查 |
+| `pnpm lint` | 🔎 执行 ESLint |
+| `pnpm build` | 📦 构建所有 workspace |
+| `pnpm format` | 🎨 使用 Prettier 格式化 |
+| `pnpm clean` | 🧹 清理构建产物和依赖 |
 
-## 🧭 Architecture Flow
+## 🧭 架构链路
 
 ```txt
 apps/* UI
@@ -178,54 +178,54 @@ apps/* UI
   -> MySQL
 ```
 
-When adding a new field or endpoint, update the chain in this order:
+新增字段或接口时，建议按下面顺序更新：
 
 ```txt
 scripts/mysql/schema.sql
   -> packages/schemas
   -> apps/api
   -> packages/api-client
-  -> affected app pages/store
+  -> 受影响的 app 页面/store
   -> docs
 ```
 
-## 🗄️ Database Strategy
+## 🗄️ 数据库策略
 
-The cloud API side uses:
+云端 API 侧使用：
 
 ```txt
 MySQL + Kysely + mysql2
 ```
 
-For local or Electron-only validation, a separate local database layer can be added later:
+本地或 Electron 验证侧后续可以单独增加：
 
 ```txt
 SQLite + better-sqlite3 + Kysely
 ```
 
-SQLite is intentionally not included in the current template until there is a concrete Electron app or local validation workflow.
+当前模板暂不内置 SQLite，等出现明确的 Electron App 或本地验证工作流后再接入，避免增加启动负担。
 
-## 🧑‍💻 Development Notes
+## 🧑‍💻 开发约定
 
-- 🎯 Keep UI platform-specific. Do not share UI components across Taro, Expo, web, and admin by default.
-- 🔁 Share contracts, schemas, request clients, business rules, and pure TypeScript utilities.
-- 🧠 Keep `packages/store` platform-neutral.
-- 🧬 Use `packages/schemas` as the source of truth for API request and response types.
-- 🔌 Use `packages/api-client` instead of calling API endpoints directly from pages.
+- 🎯 UI 默认按平台分别实现，不跨 Taro、Expo、Web、Admin 共享 UI 组件。
+- 🔁 共享类型、schema、请求 SDK、业务规则和纯 TypeScript 工具。
+- 🧠 `packages/store` 保持平台无关。
+- 🧬 `packages/schemas` 是 API 入参和响应类型的事实来源。
+- 🔌 页面通过 `packages/api-client` 请求后端，不直接拼接 API。
 
 ## 🗺️ Roadmap
 
-- 🧱 Add example CRUD module using the MySQL/Kysely stack.
-- 🛤️ Add optional migration tooling for production database changes.
-- 🖥️ Add Electron app template with SQLite validation storage.
-- ✅ Add CI examples for typecheck, lint, and build.
-- 🚢 Add deployment examples for API and web/admin apps.
+- 🧱 增加基于 MySQL/Kysely 的 CRUD 示例模块。
+- 🛤️ 增加生产数据库变更所需的 migration 工具。
+- 🖥️ 增加 Electron + SQLite 验证存储模板。
+- ✅ 增加 typecheck、lint、build 的 CI 示例。
+- 🚢 增加 API 和 Web/Admin 的部署示例。
 
 ## 🤝 Contributing
 
-Issues and pull requests are welcome.
+欢迎提交 issue 和 pull request。
 
-Before opening a pull request, run:
+提交 PR 前建议运行：
 
 ```bash
 pnpm typecheck
@@ -233,8 +233,8 @@ pnpm lint
 pnpm build
 ```
 
-Please keep changes small and document which workspace is affected.
+请尽量保持小步提交，并说明影响到的 workspace。
 
 ## 📄 License
 
-This template does not include a license yet. Add a `LICENSE` file before publishing it as an open-source project.
+当前模板还没有内置许可证。正式开源发布前，请添加 `LICENSE` 文件。
