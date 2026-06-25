@@ -123,8 +123,8 @@ pnpm db:init
 
 ```bash
 pnpm dev:api      # ⚡ NestJS API, http://localhost:3000
-pnpm dev:web      # 🌐 Vite Web, http://localhost:5173
-pnpm dev:admin    # 🛠️ Vite Admin, http://localhost:5174
+pnpm dev:web      # 🌐 Vite Web, http://localhost:8081
+pnpm dev:admin    # 🛠️ Vite Admin, http://localhost:8082
 pnpm dev:mobile   # 📱 Expo / React Native
 pnpm dev:weapp    # 💬 Taro 微信小程序
 ```

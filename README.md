@@ -123,8 +123,8 @@ Run one app at a time:
 
 ```bash
 pnpm dev:api      # ⚡ NestJS API, http://localhost:3000
-pnpm dev:web      # 🌐 Vite web app, http://localhost:5173
-pnpm dev:admin    # 🛠️ Vite admin app, http://localhost:5174
+pnpm dev:web      # 🌐 Vite web app, http://localhost:8081
+pnpm dev:admin    # 🛠️ Vite admin app, http://localhost:8082
 pnpm dev:mobile   # 📱 Expo / React Native
 pnpm dev:weapp    # 💬 Taro WeChat mini program
 ```
