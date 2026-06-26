@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: "首页"
+  navigationBarTitleText: "fullstack-app-template：首页"
 });
